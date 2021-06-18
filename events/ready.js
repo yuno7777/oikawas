@@ -6,8 +6,8 @@ module.exports = (client) => {
   const activities = ["//help",`over ${client.users.cache.size} users!`];
   setInterval(() => {
     let activity = activities[Math.floor(Math.random() * activities.length)];
-    client.user.setActivity("//help", {
-  type: "LISTENING",
+    client.user.setActivity('Haikyu!!', {
+  type: "WATCHING",
   browser:`Discord iOS`});
   }, 20000);
   
