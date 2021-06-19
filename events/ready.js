@@ -8,7 +8,7 @@ module.exports = (client) => {
     let activity = activities[Math.floor(Math.random() * activities.length)];
     client.user.setActivity('//help', {
   type: "STREAMING",
-  browser:`Discord iOS`});
+  url: "https://www.twitch.tv/discord"});
   }, 20000);
   
 };
