@@ -56,7 +56,13 @@ fs.readdir("./commands/", (_err, files) => {
 });
 
 
-
+client.on('message', message => {
+    
+    if (message.content === '<@853772078795587624>') {
+      
+      message.channel.send('My Prefix is **//** !');
+    }
+  });
 
 
     
