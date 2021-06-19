@@ -41,3 +41,4 @@ module.exports = {
             .then(collected => collected.first() && collected.first().emoji.name);
     }
 };
+

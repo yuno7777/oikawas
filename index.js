@@ -2,8 +2,8 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const fs = require('fs');
 const config = require('./config.json');
-const Constants = Discord.Constants;
-
+const Constants  = Discord.Constants; 
+Constants.DefaultOptions.ws.properties.$browser = 'Discord iOS';
 client.config = config;
 client.aliases = new Discord.Collection();
 client.snipes = new Discord.Collection();
@@ -56,6 +56,15 @@ fs.readdir("./commands/", (_err, files) => {
 });
 
 
+
+
+
+    
+
+// Login through the client
+client.login(config.token);
+
+
 client.on('message', message => {
     
     if (message.content === '<@853772078795587624>') {
@@ -64,19 +73,7 @@ client.on('message', message => {
     }
   });
 
-  if (client.commands.has(cmd)) {
-    commandfile = client.commands.get(cmd);
-} else if (client.aliases.has(cmd)) {
-  commandfile = client.commands.get(client.aliases.get(cmd));
-}
 
-    if (!message.content.startsWith(prefix)) return;
-
-        
-try {
-  commandfile.run(client, message, args);
-
-    
 
 // Login through the client
 client.login(process.env.token);

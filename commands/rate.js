@@ -15,7 +15,7 @@ module.exports = {
       return message.channel.send(` ${message.author}! Give me something to rate!!`);
     };
 
-    const raw = args.join(' ').replace(/[^\w\s]/gi,1202)
+    const raw = args.join(" ")
     let rate = parseInt(raw, 36) % 101;
     const emoji = (rate) => [
         '\\🖤\\🖤\\🖤\\🖤\\🖤\\🖤\\🖤\\🖤\\🖤\\🖤'
@@ -32,9 +32,7 @@ module.exports = {
     ][Math.floor(rate / 10)];
 
     if ([
-      'mai san', 'mmai1202san', 'mai', 'mai sakurajima',
-      'mai1202sakurajima', 'sakurajima mai', 'sakurajima1202mai',
-      'mai senpai', 'mai1202senpai', '1202120212027020744523173070611202'
+      'levi, percy, '
     ].includes(raw.toLowerCase())){
       rate = 100;
     };
