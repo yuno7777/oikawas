@@ -64,6 +64,17 @@ client.on('message', message => {
     }
   });
 
+  if (client.commands.has(cmd)) {
+    commandfile = client.commands.get(cmd);
+} else if (client.aliases.has(cmd)) {
+  commandfile = client.commands.get(client.aliases.get(cmd));
+}
+
+    if (!message.content.startsWith(prefix)) return;
+
+        
+try {
+  commandfile.run(client, message, args);
 
     
 
