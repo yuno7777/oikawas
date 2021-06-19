@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const fs = require('fs');
 const config = require('./config.json');
 const Constants  = Discord.Constants; 
-Constants.DefaultOptions.ws.properties.$browser = 'Discord iOS';
+
 client.config = config;
 client.aliases = new Discord.Collection();
 client.snipes = new Discord.Collection();
