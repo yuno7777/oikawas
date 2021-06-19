@@ -21,7 +21,7 @@ module.exports.run = async (client, message, args) => {
     .setTitle(`Statistics of ${client.user.username}`)
     .setColor('#FFE5b4')
     .addField("Server Count", `${servercount}`, true)
-    .addField("Users Count", `${usercount}`, true)
+    .addField("Users Count", `${client.users.cache.size}`, true)
     
     .addField('Architecture', `${arch}`, true)
     .addField('Platform', `${platform}`, true)
