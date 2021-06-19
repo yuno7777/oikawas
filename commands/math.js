@@ -12,7 +12,7 @@ module.exports = {
       const embed = new MessageEmbed()
         .setColor(`${Color}`)
         .setTitle(`Result`)
-        .setDescription(math.evaluate(args.join(" ")))
+        .setDescription(math.evaluate(args.join(`" "`)))
         .setTimestamp();
 
       message.channel.send(embed);
